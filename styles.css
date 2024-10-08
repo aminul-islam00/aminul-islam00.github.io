@@ -1,0 +1,1492 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Background Animation */
+#animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Bubbles Background */
+#bubbles-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: rise 10s infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slogan {
+  font-size: 18px;
+  font-style: italic;
+  color: #777;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.content-left {
+  flex: 1;
+}
+
+.content-right {
+  flex: 1;
+  text-align: center;
+}
+
+.content-right img {
+  border-radius: 50%;
+  width: 250px; /* Increased size */
+  height: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Sections */
+.header-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.header-box {
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header-box:hover {
+  transform: translateY(-5px);
+}
+
+.header-box h2 {
+  text-align: center;
+}
+
+/* Animated Sections */
+.animated-section {
+  padding: 30px;
+  margin: 20px 0;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Bio Animation */
+.bio {
+  animation: slideIn 0.5s ease-in-out forwards;
+  background-color: rgb(128, 127, 126);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Certificates and Education Boxes */
+.certificate-box,
+.education-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.certificate-img,
+.education-img {
+  width: 100px; /* Adjusted size */
+  height: auto;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  background-color: #007BFF;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Bio Section */
+.bio-section {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 30px;
+  margin: 20px 0;
+  background-color: rgba(196, 188, 188, 0.9); /* Adjust the background as needed */
+  position: relative; /* For absolute positioning of child elements if needed */
+  height: 100vh; /* Make it full height to center vertically */
+}
+
+/* Header Animation Styles */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.animated-text {
+  display: inline-block;
+  animation: textAnimation 5s ease-in-out infinite;
+  color: #007BFF; /* Adjust color as needed */
+}
+
+@keyframes textAnimation {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the value for the height of the animation */
+    opacity: 0.7; /* Fade effect */
+  }
+}
+
+/* Job Title Styles */
+.job-title {
+  font-size: 24px; /* Increased size */
+  font-weight: bold;
+  margin-top: 10px;
+  color: #007BFF; /* Stylish color */
+}
+
+/* Skills Section */
+.skills-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.skill {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-3px);
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 20px;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+  margin: 10px 0;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.contact-section a {
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-section a:hover {
+  color: #0056b3;
+}
+/* Animated Text Styles */
+.animated-text {
+  display: inline-block;
+  color: #007BFF; /* Blue color */
+  font-size: 3rem; /* Increased size */
+  position: relative; /* Needed for caret positioning */
+}
+
+/* Typing Animation */
+.typing-animation {
+  border-right: 2px solid #007BFF; /* Caret color */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  animation: typing 4s steps(15) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Caret blinking effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #007BFF; /* Blue color */
+  }
+}
+
+/* Fade In Animation */
+.fade-in-text {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1.5s forwards; /* Animation duration and end state */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Start from invisible */
+      transform: translateY(20px); /* Optional: Slightly move it up */
+  }
+  to {
+      opacity: 1; /* End fully visible */
+      transform: translateY(0); /* End at original position */
+  }
+}
+.about-section {
+  background: linear-gradient(to right, #4a90e2, #50e3c2); /* Gradient background */
+  color: #fff; /* White text color for contrast */
+  padding: 40px; /* Spacing around the section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* Positioning for pseudo-elements */
+}
+
+.about-section h2 {
+  font-size: 2.5rem; /* Larger heading */
+  text-align: center; /* Centered heading */
+  margin-bottom: 20px; /* Space below heading */
+  animation: fadeInDown 1s ease-in-out; /* Animation effect for heading */
+}
+
+.about-section p {
+  font-size: 1.2rem; /* Larger font size for the text */
+  line-height: 1.6; /* Better line spacing */
+  animation: fadeInUp 1.5s ease-in-out; /* Animation effect for text */
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px); /* Slide down from above */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* Final position */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* Slide up from below */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* Final position */
+  }
+}
+.about-section {
+  position: relative; /* Positioning for bubble effect */
+  padding: 40px; /* Spacing around the section */
+  color: #fff; /* Text color */
+  overflow: hidden; /* Hides overflow for bubbles */
+}
+
+.bubble-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2); /* Transparent background */
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.about-section h2 {
+  font-size: 2.5rem; /* Larger heading */
+  text-align: center; /* Centered heading */
+  margin-bottom: 20px; /* Space below heading */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.about-section p {
+  font-size: 1.2rem; /* Larger font size for the text */
+  line-height: 1.6; /* Better line spacing */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Start from invisible */
+      transform: translateY(20px); /* Slide up from below */
+  }
+  to {
+      opacity: 1; /* Fade in */
+      transform: translateY(0); /* Final position */
+  }
+}
+
+/* Bubble effect */
+@keyframes bubble {
+  0% {
+      transform: translateY(0); /* Start position */
+  }
+  100% {
+      transform: translateY(-100px); /* Move up */
+  }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px; /* Start below the section */
+  background: rgba(255, 255, 255, 0.5); /* Bubble color */
+  border-radius: 50%; /* Make it circular */
+  animation: bubble 6s infinite; /* Bubble animation */
+  opacity: 0.5; /* Semi-transparent */
+}
+
+/* Create multiple bubbles */
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  left: 20%; /* Positioning */
+  animation-delay: 0s; /* Start immediately */
+}
+.bubble:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  left: 60%; /* Positioning */
+  animation-delay: 1s; /* Start after 1 second */
+}
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 40%; /* Positioning */
+  animation-delay: 2s; /* Start after 2 seconds */
+}
+.bubble:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  left: 80%; /* Positioning */
+  animation-delay: 3s; /* Start after 3 seconds */
+}
+
+/* Adding multiple bubbles to the section */
+.bubble-background:before,
+.bubble-background:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.3); /* Bubble color */
+  border-radius: 50%; /* Make it circular */
+  animation: bubble 6s infinite; /* Bubble animation */
+  opacity: 0.5; /* Semi-transparent */
+}
+
+.bubble-background:before {
+  width: 40px; /* Smaller bubble */
+  height: 40px; /* Smaller bubble */
+  animation-delay: 0s; /* Start immediately */
+}
+
+.bubble-background:after {
+  width: 60px; /* Bigger bubble */
+  height: 60px; /* Bigger bubble */
+  animation-delay: 2s; /* Start after 2 seconds */
+}
+.about-section {
+  position: relative;
+  padding: 40px;
+  color: #fff;
+  overflow: hidden;
+  background: transparent; /* Transparent background */
+}
+
+.bubble-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out forwards; /* Text fades in and stays */
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out forwards; /* Text fades in and stays */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Bubble effect */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.4); /* Semi-transparent bubbles */
+  border-radius: 50%;
+  animation: bubble 10s infinite ease-in; /* Continuous bubble animation */
+  opacity: 0.5;
+}
+
+@keyframes bubble {
+  0% {
+      transform: translateY(0);
+      opacity: 0.5;
+  }
+  100% {
+      transform: translateY(-800px); /* Move upward */
+      opacity: 0;
+  }
+}
+
+/* Create multiple bubbles with different sizes and positions */
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  left: 20%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+.bubble:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  left: 30%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+.bubble:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+.bubble:nth-child(5) {
+  width: 90px;
+  height: 90px;
+  left: 40%;
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+.bubble:nth-child(6) {
+  width: 50px;
+  height: 50px;
+  left: 60%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+.bubble:nth-child(7) {
+  width: 100px;
+  height: 100px;
+  left: 80%;
+  animation-duration: 12s;
+  animation-delay: 3s;
+}
+.bubble:nth-child(8) {
+  width: 120px;
+  height: 120px;
+  left: 10%;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(9) {
+  width: 110px;
+  height: 110px;
+  left: 90%;
+  animation-duration: 13s;
+  animation-delay: 1s;
+}
+.bubble:nth-child(10) {
+  width: 130px;
+  height: 130px;
+  left: 25%;
+  animation-duration: 14s;
+  animation-delay: 5s;
+}
+/* General Bubble Background */
+.bubble-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure bubbles stay behind the header */
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent bubbles */
+  border-radius: 50%;
+  animation: bubbleRise 20s infinite ease-in; /* Continuous floating animation */
+  opacity: 0.7;
+  z-index: -1; /* Keep bubbles behind the text */
+}
+
+@keyframes bubbleRise {
+  0% {
+      transform: translateY(0);
+      opacity: 0.5;
+  }
+  100% {
+      transform: translateY(-1000px);
+      opacity: 0;
+  }
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
+  background: transparent; /* Allows bubbles to be visible */
+  z-index: 2; /* Keep the header above bubbles */
+  color: #ffffff;
+}
+
+/* Slogan Text */
+.header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  z-index: 3; /* Ensure it's above everything */
+  position: relative;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00aaff; /* Change color on hover */
+}
+
+/* Bubble Variations */
+.bubble:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 10%;
+  animation-duration: 18s;
+}
+.bubble:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  left: 30%;
+  animation-duration: 22s;
+}
+.bubble:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  animation-duration: 20s;
+}
+.bubble:nth-child(4) {
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 25s;
+}
+.bubble:nth-child(5) {
+  width: 110px;
+  height: 110px;
+  left: 90%;
+  animation-duration: 18s;
+}
+/* General Styling for Section */
+.header-section {
+  position: relative;
+  padding: 60px 20px;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  z-index: 2; /* Above the background */
+}
+
+/* Header Boxes Styling */
+.header-box {
+  background: rgba(255, 255, 255, 0.2); /* Light semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 45%; /* Takes 45% of the width */
+  color: #ffffff;
+  z-index: 2;
+}
+
+.header-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-box li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* New Floating Particle Background */
+#animated-background-cert-edu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#animated-background-cert-edu::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0.5;
+  animation: floatingParticles 10s infinite linear;
+}
+
+@keyframes floatingParticles {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Particle Effect */
+#animated-background-cert-edu::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 0.5;
+  animation: particleMove 15s infinite ease-in-out;
+}
+
+@keyframes particleMove {
+  0% {
+      transform: translateX(0) translateY(0);
+  }
+  100% {
+      transform: translateX(50px) translateY(50px);
+  }
+}
+
+/* List Hover Effects */
+.header-box ul li {
+  color: #f5f5f5;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.header-box ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px); /* Adds hover effect */
+}
+/* General Styling for Section */
+.header-section {
+  position: relative;
+  padding: 60px 20px;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  z-index: 2; /* Above the background */
+}
+
+/* Header Boxes Styling */
+.header-box {
+  background: rgba(255, 255, 255, 0.2); /* Light semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 45%;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.header-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-box li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* New Floating Particle Background with Bubble Effect */
+#animated-background-cert-edu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+}
+
+/* Bubble Animation */
+#animated-background-cert-edu::before, #animated-background-cert-edu::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: bubbleMove 20s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+@keyframes bubbleMove {
+  0% {
+      transform: translateY(100%) scale(0.5);
+  }
+  50% {
+      transform: translateY(30%) scale(1);
+  }
+  100% {
+      transform: translateY(-100%) scale(0.5);
+  }
+}
+
+/* Bubble Creation */
+#animated-background-cert-edu .bubble {
+  position: absolute;
+  bottom: -150px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: riseBubble 10s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+#animated-background-cert-edu .bubble:nth-child(1) {
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(2) {
+  left: 20%;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(3) {
+  left: 35%;
+  animation-delay: 6s;
+  animation-duration: 10s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+  animation-duration: 13s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+  animation-duration: 11s;
+}
+
+@keyframes riseBubble {
+  0% {
+      transform: translateY(0);
+      opacity: 0.7;
+  }
+  100% {
+      transform: translateY(-800px);
+      opacity: 0;
+  }
+}
+
+/* List Hover Effects */
+.header-box ul li {
+  color: #f5f5f5;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.header-box ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+/* General Styling for Section */
+.header-section {
+  position: relative;
+  padding: 60px 20px;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  z-index: 2; /* Above the background */
+}
+
+/* Header Boxes Styling */
+.header-box {
+  background: rgba(255, 255, 255, 0.2); /* Light semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 45%;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.header-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-box li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* New Floating Particle Background with Bubble Effect */
+#animated-background-cert-edu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+}
+
+/* Bubble Animation */
+#animated-background-cert-edu::before, #animated-background-cert-edu::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: bubbleMove 20s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+@keyframes bubbleMove {
+  0% {
+      transform: translateY(100%) scale(0.5);
+  }
+  50% {
+      transform: translateY(30%) scale(1);
+  }
+  100% {
+      transform: translateY(-100%) scale(0.5);
+  }
+}
+
+/* Bubble Creation */
+#animated-background-cert-edu .bubble {
+  position: absolute;
+  bottom: -150px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: riseBubble 10s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+#animated-background-cert-edu .bubble:nth-child(1) {
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(2) {
+  left: 20%;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(3) {
+  left: 35%;
+  animation-delay: 6s;
+  animation-duration: 10s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+  animation-duration: 13s;
+}
+
+#animated-background-cert-edu .bubble:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+  animation-duration: 11s;
+}
+
+@keyframes riseBubble {
+  0% {
+      transform: translateY(0);
+      opacity: 0.7;
+  }
+  100% {
+      transform: translateY(-800px);
+      opacity: 0;
+  }
+}
+
+/* List Hover Effects */
+.header-box ul li {
+  color: #f5f5f5;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.header-box ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+/* General Styling for Section */
+.header-section {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  z-index: 2; /* Above the background */
+  flex-wrap: wrap;
+}
+
+/* Header Boxes Styling */
+.header-box {
+  background: rgba(255, 255, 255, 0.3); /* Light semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 45%;
+  color: #ffffff;
+  z-index: 2;
+  margin: 20px 0;
+}
+
+.header-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-box li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Skills Section with New Background and Bubbles */
+#skills {
+  background: rgba(54, 162, 235, 0.7); /* Blueish background for skills */
+}
+
+#animated-background-skills {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(54, 162, 235, 0.3), transparent);
+}
+
+/* Experience Section with New Background and Bubbles */
+#experience {
+  background: rgba(255, 159, 64, 0.7); /* Orange background for experience */
+}
+
+#animated-background-experience {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(255, 159, 64, 0.3), transparent);
+}
+
+/* Contact Section with New Background and Bubbles */
+#contact {
+  background: rgba(75, 192, 192, 0.7); /* Teal background for contact */
+}
+
+#animated-background-contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(75, 192, 192, 0.3), transparent);
+}
+
+/* Bubble Animation for Skills, Experience, and Contact */
+#animated-background-skills::before, 
+#animated-background-experience::before, 
+#animated-background-contact::before,
+#animated-background-skills::after, 
+#animated-background-experience::after, 
+#animated-background-contact::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: bubbleMove 20s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+/* Bubble Keyframes */
+@keyframes bubbleMove {
+  0% {
+      transform: translateY(100%) scale(0.5);
+  }
+  50% {
+      transform: translateY(30%) scale(1);
+  }
+  100% {
+      transform: translateY(-100%) scale(0.5);
+  }
+}
+
+/* Bubble Creation */
+#animated-background-skills .bubble, 
+#animated-background-experience .bubble, 
+#animated-background-contact .bubble {
+  position: absolute;
+  bottom: -150px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: riseBubble 10s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+#animated-background-skills .bubble:nth-child(1), 
+#animated-background-experience .bubble:nth-child(1), 
+#animated-background-contact .bubble:nth-child(1) {
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+#animated-background-skills .bubble:nth-child(2), 
+#animated-background-experience .bubble:nth-child(2), 
+#animated-background-contact .bubble:nth-child(2) {
+  left: 20%;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+
+#animated-background-skills .bubble:nth-child(3), 
+#animated-background-experience .bubble:nth-child(3), 
+#animated-background-contact .bubble:nth-child(3) {
+  left: 35%;
+  animation-delay: 6s;
+  animation-duration: 10s;
+}
+
+#animated-background-skills .bubble:nth-child(4), 
+#animated-background-experience .bubble:nth-child(4), 
+#animated-background-contact .bubble:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+  animation-duration: 13s;
+}
+
+#animated-background-skills .bubble:nth-child(5), 
+#animated-background-experience .bubble:nth-child(5), 
+#animated-background-contact .bubble:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+  animation-duration: 11s;
+}
+
+@keyframes riseBubble {
+  0% {
+      transform: translateY(0);
+      opacity: 0.7;
+  }
+  100% {
+      transform: translateY(-800px);
+      opacity: 0;
+  }
+}
+
+/* List Hover Effects */
+.header-box ul li {
+  color: #f5f5f5;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.header-box ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+/* Footer Styling */
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+.footer h2, .footer h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.social-media a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #ffa500; /* Change color on hover */
+}
+
+/* Contact Form Styling */
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ffa500; /* Button color */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #ff7f00; /* Darker button color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.quick-contact {
+  margin-top: 20px;
+}
+
+.quick-contact h3 {
+  margin-bottom: 15px;
+}
+
+.quick-contact a {
+  text-decoration: none; /* Remove underline */
+}
+
+.quick-contact button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ffa500; /* Button color */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quick-contact button:hover {
+  background: #ff7f00; /* Darker button color on hover */
+}
+.about-me {
+  text-align: center; /* Center text within the About Me section */
+}
+
+.facilitation-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+}
+
+.btn {
+  background-color: #2980b9;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1.1em;
+}
+
+.btn:hover {
+  background-color: #1a5276;
+}
+
